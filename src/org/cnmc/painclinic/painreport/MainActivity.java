@@ -105,7 +105,7 @@ public class MainActivity extends Activity {
     /** Called when the activity is first created. */
     
     /*
-     * My simple comment - to test commit
+     * My simple comment - to test commit 1
      * author - raosunil
      */
     
