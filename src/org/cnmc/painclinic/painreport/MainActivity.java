@@ -103,6 +103,12 @@ public class MainActivity extends Activity {
     }
 
     /** Called when the activity is first created. */
+    
+    /*
+     * My simple comment - to test commit
+     * author - raosunil
+     */
+    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
