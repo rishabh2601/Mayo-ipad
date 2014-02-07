@@ -1,4 +1,4 @@
-sparky
-======
+PainReport
+==========
 
-sparky
+Pain Clinic's pain report app

@@ -1,0 +1,66 @@
+<project name="PainReport" default="build" basedir=".">
+    <property name="src" value="src" />
+    <property name="classes" value="classes" />
+    <property name="assets" value="../assets/www" />
+	<property name="build" value="build"/>
+	<property name="lib" value="lib"/>
+	<property name="properties" value="properties"/>
+	<property name="tomcat.home" value="../../prtc7029"/>
+	<property name="dist.war" value="painreport.war"/>
+	
+    <path id="compile.classpath">
+       <pathelement path="${classes}"/>  
+       <fileset dir="${lib}">
+          <include name="**/*.jar"/>
+       </fileset> 
+    </path>
+
+	<target name="prepare">
+		<tstamp/>
+		<mkdir dir="${build}"/>
+	</target>
+		
+	<target name="compile">
+		<javac source="1.6" target="1.6" srcdir="${src}" destdir="${classes}">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+		
+	<target name="build" depends="compile,prepare">
+		<tstamp/>
+		<mkdir dir="${build}/WEB-INF"/>
+        <copy todir="${build}" overwrite="true">
+            <fileset dir="${assets}">
+            </fileset>
+        </copy>
+		<copy todir="${build}/WEB-INF" overwrite="true">
+			<fileset dir=".">
+				<exclude name="${lib}/servlet-api.jar"/>
+				<exclude name="${properties}"/>
+				<include name="${classes}/**"/>
+				<include name="${lib}/**"/>
+			</fileset>	
+		</copy>
+		<copy todir="${build}/WEB-INF/${classes}/${properties}" overwrite="true">
+      		<fileset dir="${properties}">
+      		      <include name="*.properties"/>
+			</fileset>
+    		</copy>
+    		<copy file="web.xml" tofile="${build}/WEB-INF/web.xml" overwrite="true"/>		
+	</target>
+
+	<target name="dist" depends="build">
+    		<jar destfile="${dist.war}" basedir="${build}"/>    
+  	</target>
+	
+  	<target name="deploy" depends="dist">
+    		<copy file="${dist.war}" todir="${tomcat.home}/webapps" overwrite="yes"/>
+  	</target>  
+	
+	<!-- This does not include tomcat extensions to clean out the deployed webapp
+		 You have to do that on your own -->
+	<target name="clean">
+		<delete dir="${build}" />
+		<delete file="${dist.war}" />
+	</target>
+</project>

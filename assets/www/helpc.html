@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h2>CNMC Pain Clinic Pain Report App Clinician Help Page</h2>
+
+<h3>Reviewing Question Content</h3>
+<p>
+    You may review question content without operating the app and submitting results in a WebKit enabled browser at URL
+    http://SERVER/painreport/. Google Chrome, Firefox, and Safari should work, but Internet Explorer may not.
+</p>
+
+<h3>Reviewing Patient Responses</h3>
+<p>
+    To view Patient Responses, go to URL http://SERVER/painreport/prdisplay. This will show a table of all patient
+    responses. You may limit the results between and upper and lower bound by using URL
+    http://SERVER/painreport/prdisplay?lb=LOWER_VALUE&ub=UPPER_VALUE, where LOWER_VALUE and UPPER_VALUE specify the range
+    (inclusive). For example, http://SERVER/painreport/prdisplay?lb=3301&ub=3400 will show the 100 Patients with PINs
+    between 3301 and 3400.
+</p>
+<p>
+    The times shown on the server are in the MST timezone of Arizona since that is where the server is located. Arizona
+    is 2 hours behind the East coast (EST) until daylight savings when it will be a 3 hour difference.
+</p>
+<p>
+    There are some columns like "Is Android?" and "Is Completed?" that are there for future use. You can toggle
+    "Is Completed?" now but it will not do anything. It is there for future use to allow a clinician to indicate
+    a Patient has completed the number of trials. At this time there is no limit to the number of trials.
+</p>
+<p>
+    You may however add a new Patient using the dialog at the bottom. The app has been pre-provisioned with the
+    PINs specified to me in December 2013, but you may add additional ones (provided the PIN is unique) here.
+</p>
+<p>
+    We realize the server display is very crude and lacks an ability to export data. We are aware of this and will
+    put up a better UI over our winter break.
+</p>
+
+<h3>Checking Patient Next Reading Time</h3>
+<p>
+    If a Patient is frustrated because s/he thinks a reading is due but keeps getting an error that it is not,
+    then you can check by going to URL
+    http://SERVER/painreport/primport?PIN=XXXX where SERVER is the server and XXX is the PIN number.
+    <br/>
+    If you think there is an error with the time (keep in mind it is MST) then contact ASU.
+</p>
+
+<h3>Dealing with Errors</h3>
+<p>
+    Of course ASU will help with troubleshooting errors, but there are a few things you should know ahead of time
+    in case they arise. It is also helpful to familiarize yourself with the
+    <a href="./help.html">Patient help</a> especially the Known Bugs and Workarounds section.
+    <br/>
+    <UL>
+    <LI>If the Patient has a phone running Android version 3.x, it will likely not work.</LI>
+    <LI>The image question goes off the screen.</LI>
+    <LI>The Patient may get a reminder when s/he should not get one. They can always clear reminders
+        from their Notifications bar.</LI>
+    <LI>The Patient must complete the survey in one sitting, and must have a stable network
+        connection when s/he starts and finishes (but not necessarily in between). We recommend not
+        taking the survey when riding in a car as the service can be intermittent.</LI>
+    </UL>
+</p>
+</body>
+</html>

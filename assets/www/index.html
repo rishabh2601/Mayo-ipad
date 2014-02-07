@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel=stylesheet href="css/pure/style.css">
+<title>Pain Report</title>
+<script src="js/prinit.js"></script>
+<script src="js/page.js"></script>
+</head>
+<body onload="initPainReport()">
+    <img src="css/background.png" alt="CNMC logo"/>
+    <p>
+    This application leads you through a series of questions.
+    </p>
+    <p>
+    Upon completion your answers will be saved to our servers using your secret PIN code.
+    </p>
+    <p>
+    You should complete the survey in one sitting. It is OK if you get interrupted briefly
+    (e.g. a phone call) but delaying completion too long means you will have to start over
+    from the beginning.    
+    </p>
+    <p>
+    When you are ready to submit your answers your phone will need to have an active
+    Internet connection.
+    </p>
+    <!--
+    <p>
+        <div id="__prPIN"></div>
+        <div id="__prServer"></div>
+    </p>
+    -->
+    <input type="hidden" id="__prPIN" value="0000"/>
+    <input type="hidden" id="__prServer" value="http://"/>
+
+    <!-- I have absolutely no idea why these buttons do not work 2nd time around. Oh well
+    <input type="button" value="Get Started" onclick="myFunction();echoSessionStorage();window.location.href='DaysInPain.html'"/>
+    <input type="button" value="Close" onclick="__blhelper.finishMe()"/>
+    -->
+    <input type="button" value="Get Started" onclick="myFunction();echoSessionStorage();window.location.href='DaysInPain.html'"/>
+
+    <!--
+    <a href="DaysInPain.html" onclick="myFunction();echoSessionStorage();window.location.href='DaysInPain.html'">Let's get started!</a>
+    -->
+
+    <script>
+    function myFunction()
+    {
+        var x=document.getElementById("__prPIN");
+        var y=document.getElementById("__prServer");
+        console.log("In myFunction, PIN " + x.value + "\nServer " + y.value);
+        getStorage().setItem("PIN",x.value);
+        getStorage().setItem("SERVER",y.value);
+
+    }
+    </script>
+
+</body>
+</html>

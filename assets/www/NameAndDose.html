@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <!--
+        <link rel=stylesheet href="css/jquery.mobile-1.0b3.css" />
+
+        <link rel=stylesheet href="css/graphite-1.3.1_4/generated/water/jquery.mobile-1.3.1.css" />
+
+        <script src="js/jquery-1.6.4.js"></script>
+        <script src="js/jquery.mobile-1.0b3.js"></script>
+        <link rel=stylesheet href="css/website/css/styles.css" />
+        -->
+        <link rel=stylesheet href="css/pure/style.css">
+        <script src="js/prinit.js"></script>
+        <script src="js/page.js"></script>
+    </head>
+    <body onLoad="finalizePageRender()"  onunload="onUnloadListener()">
+        <div data-role=page>
+            <div data-role=header>
+                <h1>CNMC Pain Report</h1>
+            </div>
+            <div data-role=content>
+                <div id="_prquestion"></div>
+                    <input type="checkbox" id="o1" _prAnswer='None' value='None'  onchange="onChangeListener()"/>
+                    <label for="o1">None</label><br>
+                    <input type="checkbox" id="o2" _prAnswer='Oxycodone_5mg' value='Oxycodone_5mg'  onchange="onChangeListener()"/>
+                    <label for="o2">Oxycodone - 5mg Tab</label><br>
+                    <input type="checkbox" id="o3" _prAnswer='Oxycodone_10mg' value='Oxycodone_10mg'  onchange="onChangeListener()"/>
+                    <label for="o3">Oxycodone - 10mg Tab</label><br>
+                    <input type="checkbox" id="o4" _prAnswer='Percocet_1Tab' value='Percocet_1Tab'  onchange="onChangeListener()"/>
+                    <label for="o4">Percocet - 1 Tab</label><br>
+                    <input type="checkbox" id="o5" _prAnswer='Percocet_2Tab' value='Percocet_2Tab'  onchange="onChangeListener()"/>
+                    <label for="o5">Percocet - 2 Tabs</label><br>
+                    <input type="checkbox" id="o6" _prAnswer='Dilaudid_2mg' value='Dilaudid_2mg'  onchange="onChangeListener()"/>
+                    <label for="o6">Dilaudid - 2mg</label><br>
+                    <input type="checkbox" id="o7" _prAnswer='Dilaudid_4mg' value='Dilaudid_4mg'  onchange="onChangeListener()"/>
+                    <label for="o7">Dilaudid - 4mg</label><br>
+                    <input type="checkbox" id="o8" _prAnswer='Dilaudid_8mg' value='Dilaudid_8mg'  onchange="onChangeListener()"/>
+                    <label for="o8">Dilaudid - 8mg</label><br>
+                    <input type="checkbox" id="o9" _prAnswer='Tramadol_50mg' value='Tramadol_50mg'  onchange="onChangeListener()"/>
+                    <label for="o9">Tramadol - 50mg</label><br>
+                    <input type="checkbox" id="o10" _prAnswer='Tramadol_100mg' value='Tramadol_100mg'  onchange="onChangeListener()"/>
+                    <label for="o10">Tramadol - 100mg</label><br>
+                    <input type="checkbox" id="o11" _prAnswer='Tylenol3_1Tab' value='Tylenol3_1Tab'  onchange="onChangeListener()"/>
+                    <label for="o11">Tylenol #3 - 1 Tab</label><br>
+                    <input type="checkbox" id="o12" _prAnswer='Tylenol3_2Tab' value='Tylenol3_2Tab'  onchange="onChangeListener()"/>
+                    <label for="o12">Tylenol #3 - 2 Tabs</label><br>
+                    <input type="checkbox" id="o13" _prAnswer='Ibuprofen_600mg' value='Ibuprofen_600mg'  onchange="onChangeListener()"/>
+                    <label for="o13">Ibuprofen - 600mg</label><br>
+                    <input type="checkbox" id="o14" _prAnswer='Ibuprofen_800mg' value='Ibuprofen_800mg'  onchange="onChangeListener()"/>
+                    <label for="o14">Ibuprofen - 800mg</label><br>
+                </select>
+                <br/>
+                If you are taking other medications please indicate below:
+                <textarea rows="3" cols="25" _prAnswer="custom_med" id="TBox1" onkeyup="onChangeListener()" onchange="onChangeListener()"></textarea>
+                <br>
+                <div id="_prnav"></div>
+                <!--
+                <input type="button" value="Prev" onclick="event.preventDefault(); displayTarget(-1)">
+                <input type="button" value="Next" onclick="event.preventDefault(); displayTarget(1)" />
+                -->
+                <div data-role=footer>
+                    <div id="_prfooter"></div>
+                </div>
+            </div>
+    </body>
+</html>
