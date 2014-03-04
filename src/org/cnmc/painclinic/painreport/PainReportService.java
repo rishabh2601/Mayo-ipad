@@ -34,7 +34,7 @@ public class PainReportService extends Service{
 
 	@Override
 	public IBinder onBind(Intent arg0) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method st
 		return null;
 	}
 	
