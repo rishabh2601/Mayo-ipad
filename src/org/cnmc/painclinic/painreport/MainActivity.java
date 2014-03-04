@@ -103,14 +103,6 @@ public class MainActivity extends Activity {
     }
 
     /** Called when the activity is first created. */
-    
-    /*
-     * My simple comment - to test commit 1
-     * author - raosunil
-     * 
-     * It works - yay
-     */
-    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -154,7 +146,9 @@ public class MainActivity extends Activity {
         }
 
         // now turn on the alarm
-        makeAlarm();
+        //makeAlarm();
+        this.startService(new Intent(this, 
+                PainReportService.class));
 	}
 
 	@Override
