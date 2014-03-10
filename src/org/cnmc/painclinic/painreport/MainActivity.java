@@ -179,7 +179,7 @@ public class MainActivity extends Activity {
         switch (requestCode) {
             case RESULT_SETTINGS:
                 showUserSettings();
-                makeAlarm();  // we make an alarm after completing settings in case they changed.
+                //makeAlarm();  // we make an alarm after completing settings in case they changed.
                 break;
             case WEBVIEW_RESULT:
                 finish();
