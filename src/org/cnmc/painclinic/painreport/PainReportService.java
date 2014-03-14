@@ -67,7 +67,7 @@ public class PainReportService extends Service{
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId){				
-		return START_NOT_STICKY;
+		return START_STICKY;
 	}
 
 	public void notifyUsers(){
@@ -85,24 +85,28 @@ public class PainReportService extends Service{
 			PendingIntent pIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
 			notification.setLatestEventInfo(context, "Pain Report", "Pain Report Due!", pIntent);		
 			notification.flags |= Notification.FLAG_AUTO_CANCEL;
-			notManager.notify(0, notification);			
+			notManager.notify(0, notification);	
+			
+			//Begin of event logger
+			try {			
+				long patientId = Long.parseLong(getUserPIN());
+				PainReportEvent notifyEvent = new PainReportEvent(PainReportEvent.EVENT_NOTIFIED,System.currentTimeMillis(), new Date(System.currentTimeMillis()),patientId);
+				notifyEvent.setDescription("Pain Report notified to " + patientId);
+				PainReportEventDispatcher.getInstance().dispatchEvent(notifyEvent);
+				Log.d("PainReportService", "Inside notifyUsers and notify logger");
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				Log.d("PainReportService","Error in Notify logger "+ e.getMessage());
+			}catch(Exception e){
+				Log.d("PainReportService","Error in Notify logger "+ e.getMessage());
+			}
+			//End of event logger
 
 		} else {
 			Log.d("PainReportService", "Notification time is not available or in the future");
 		}
 		Log.d("PainReportService", "Inside notifyUsers");
-		/*try {			
-			long patientId = Long.parseLong(getUserPIN());
-			PainReportEvent notifyEvent = new PainReportEvent(PainReportEvent.EVENT_NOTIFIED,System.currentTimeMillis(), new Date(System.currentTimeMillis()),patientId);
-			notifyEvent.setDescription("Pain Report notified to " + patientId);
-			PainReportEventDispatcher.getInstance().dispatchEvent(notifyEvent);
-			Log.d("PainReportService", "Inside notifyUsers and notify logger");
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			Log.d("PainReportService","Error in Notify logger "+ e.getMessage());
-		}catch(Exception e){
-			Log.d("PainReportService","Error in Notify logger "+ e.getMessage());
-		}*/
+		
 	}
 
 	@Override
