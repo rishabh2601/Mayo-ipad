@@ -53,7 +53,7 @@ public class NotificationLoggerListener implements PainReportListener {
 		String json =  new Gson().toJson(event);
 		Log.d("NotificationLoggerListener", "Inside onEventNotified - val of json is : "+ json);
 		PainReportService pService = (PainReportService)ctxt;
-		String uri = "http://" + pService.getServerURL() +  "/painreport/primport";
+		String uri = "http://" + pService.getServerURL() +  "/AQMEcho/aqmecho";
 		
 		 try {
 		        HttpPost httpPost = new HttpPost(uri);
