@@ -1,4 +1,4 @@
-PainReport
+TeleVision CST 515
 ==========
 
-Pain Clinic's pain report app
+CST 515 iProject
