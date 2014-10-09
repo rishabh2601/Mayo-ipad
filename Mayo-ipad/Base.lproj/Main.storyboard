@@ -1,25 +1,185 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mayo-clinic-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="9yi-GF-4Ce">
+                                <rect key="frame" x="86" y="452" width="608" height="363"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-Nm-3en">
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <items>
+                                    <navigationItem title="LOGIN CREDENTIALS" id="M67-sJ-eca"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-fn-ccE">
+                                <rect key="frame" x="211" y="221" width="359" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="i1O-K5-KxH"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PO-jV-zCB">
+                                <rect key="frame" x="326" y="294" width="116" height="30"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lh2-qO-eqX"/>
+                                    <segue destination="m1v-FK-Y8R" kind="presentation" identifier="login_success" id="wLC-6z-uId"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAy-aC-RXC">
+                                <rect key="frame" x="211" y="161" width="359" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ztM-Fz-iVH"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LAI-mm-fYq" appends="YES" id="InN-Fb-QLi"/>
+                        </connections>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="passWord" destination="Z5g-fn-ccE" id="N6k-pz-Yk2"/>
+                        <outlet property="userName" destination="aAy-aC-RXC" id="NDk-9G-nOq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LAI-mm-fYq">
+                    <connections>
+                        <action selector="backgroundTap:" destination="BYZ-38-t0r" id="gcM-Nz-LUC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-1294" y="-672"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="Qx7-6D-upC">
+            <objects>
+                <viewController id="m1v-FK-Y8R" customClass="ViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSv-Xp-h5m"/>
+                        <viewControllerLayoutGuide type="bottom" id="5EG-dg-fPo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7TF-hg-jif">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C26-nR-J1n" userLabel="View-overview">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5L-7N-vqw">
+                                        <rect key="frame" x="0.0" y="216" width="768" height="700"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Name: Rishabh Srivastava
+Address: 150 S XYZ, Tempe, AZ-85281
+Phone no# xxx-xxx-xxxx
+Patient ID: abc123
+Last Appointment: 12/12/12
+Next Appointment: 12/12/13  
+Doctor's Name: Dr. Xyz
+Department: Cardiology Mayo Clinic Branch: Chandler,AZ
+Address: 123 S Gilbert Rd, Chandler, AZ - 85249   Current Medications: abc, dfgg,fgh,hhffdd,hgfdds,jhgff,sdfghh.  Last tests: MRI, Blood Test, Urine Test. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81871811220000001" green="0.81871811220000001" blue="0.81871811220000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Glz-nJ-WdM" userLabel="View-report">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kd-fx-9dy">
+                                        <rect key="frame" x="0.0" y="218" width="768" height="700"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-KG-QKs">
+                                        <rect key="frame" x="301" y="152" width="166" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Take Photo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="m1v-FK-Y8R" eventType="touchUpInside" id="Ydz-G1-b2I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81871811220000001" green="0.81871811220000001" blue="0.81871811220000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJz-94-wNp" userLabel="View-upload">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zej-Ab-HO8">
+                                        <rect key="frame" x="0.0" y="219" width="768" height="700"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzv-v8-XxQ">
+                                        <rect key="frame" x="289" y="135" width="190" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Upload image">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="uploadImage:" destination="m1v-FK-Y8R" eventType="touchUpInside" id="ass-Xc-eIW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81871811220000001" green="0.81871811220000001" blue="0.81871811220000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GXP-c7-BcC">
+                                <rect key="frame" x="119" y="54" width="530" height="29"/>
+                                <color key="backgroundColor" red="0.0" green="0.37302345610786647" blue="0.73975605867346939" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Overview"/>
+                                    <segment title="Reports"/>
+                                    <segment title="Upload"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segment:" destination="m1v-FK-Y8R" eventType="valueChanged" id="rgl-5t-Hpf"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81871811224489799" green="0.81871811224489799" blue="0.81871811224489799" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="768" height="1024"/>
+                    <connections>
+                        <outlet property="imageView" destination="4Kd-fx-9dy" id="hLD-Px-shC"/>
+                        <outlet property="imageView2" destination="Zej-Ab-HO8" id="BNY-1d-CED"/>
+                        <outlet property="segmentController" destination="GXP-c7-BcC" id="QGp-Ur-Gpc"/>
+                        <outlet property="textView" destination="u5L-7N-vqw" id="kuN-x5-QVC"/>
+                        <outlet property="upLoad" destination="WJz-94-wNp" id="aqk-Uw-fgi"/>
+                        <outlet property="viewOverview" destination="C26-nR-J1n" id="gP6-78-1oK"/>
+                        <outlet property="viewReport" destination="Glz-nJ-WdM" id="rCe-76-ZM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NJ-jA-PmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-387" y="-672"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mayo-clinic-logo.png" width="922" height="1024"/>
+    </resources>
 </document>
