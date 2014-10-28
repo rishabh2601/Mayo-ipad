@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "appConstants.h"
+
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userName;

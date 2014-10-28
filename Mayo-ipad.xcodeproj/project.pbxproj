@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635905C819F98C8000693A25 /* NSString+XMLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905C719F98C8000693A25 /* NSString+XMLExtensions.m */; };
+		635905E619F98C8E00693A25 /* WPBase64Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905CB19F98C8E00693A25 /* WPBase64Utils.m */; };
+		635905E719F98C8E00693A25 /* WPStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905CD19F98C8E00693A25 /* WPStringUtils.m */; };
+		635905E819F98C8E00693A25 /* WPXMLRPCDataCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905D019F98C8E00693A25 /* WPXMLRPCDataCleaner.m */; };
+		635905E919F98C8E00693A25 /* WPXMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905D219F98C8E00693A25 /* WPXMLRPCDecoder.m */; };
+		635905EA19F98C8E00693A25 /* WPXMLRPCDecoderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905D419F98C8E00693A25 /* WPXMLRPCDecoderDelegate.m */; };
+		635905EB19F98C8E00693A25 /* WPXMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905D619F98C8E00693A25 /* WPXMLRPCEncoder.m */; };
+		635905EC19F98C8E00693A25 /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905D919F98C8E00693A25 /* XMLRPCConnection.m */; };
+		635905ED19F98C8E00693A25 /* XMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905DB19F98C8E00693A25 /* XMLRPCDecoder.m */; };
+		635905EE19F98C8E00693A25 /* XMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905DD19F98C8E00693A25 /* XMLRPCEncoder.m */; };
+		635905EF19F98C8E00693A25 /* XMLRPCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905DF19F98C8E00693A25 /* XMLRPCExtensions.m */; };
+		635905F019F98C8E00693A25 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905E119F98C8E00693A25 /* XMLRPCRequest.m */; };
+		635905F119F98C8E00693A25 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905E319F98C8E00693A25 /* XMLRPCResponse.m */; };
+		635905F219F98C8E00693A25 /* XMLValueDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 635905E519F98C8E00693A25 /* XMLValueDecoder.m */; };
 		63EE3F7319E5F95D0095026D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE3F7219E5F95D0095026D /* main.m */; };
 		63EE3F7619E5F95D0095026D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE3F7519E5F95D0095026D /* AppDelegate.m */; };
 		63EE3F7919E5F95D0095026D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE3F7819E5F95D0095026D /* ViewController.m */; };
@@ -32,6 +46,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		635905C519F98C8000693A25 /* appConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appConstants.h; sourceTree = "<group>"; };
+		635905C619F98C8000693A25 /* NSString+XMLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLExtensions.h"; sourceTree = "<group>"; };
+		635905C719F98C8000693A25 /* NSString+XMLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLExtensions.m"; sourceTree = "<group>"; };
+		635905CA19F98C8E00693A25 /* WPBase64Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBase64Utils.h; sourceTree = "<group>"; };
+		635905CB19F98C8E00693A25 /* WPBase64Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBase64Utils.m; sourceTree = "<group>"; };
+		635905CC19F98C8E00693A25 /* WPStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPStringUtils.h; sourceTree = "<group>"; };
+		635905CD19F98C8E00693A25 /* WPStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPStringUtils.m; sourceTree = "<group>"; };
+		635905CE19F98C8E00693A25 /* WPXMLRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPXMLRPC.h; sourceTree = "<group>"; };
+		635905CF19F98C8E00693A25 /* WPXMLRPCDataCleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPXMLRPCDataCleaner.h; sourceTree = "<group>"; };
+		635905D019F98C8E00693A25 /* WPXMLRPCDataCleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPXMLRPCDataCleaner.m; sourceTree = "<group>"; };
+		635905D119F98C8E00693A25 /* WPXMLRPCDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPXMLRPCDecoder.h; sourceTree = "<group>"; };
+		635905D219F98C8E00693A25 /* WPXMLRPCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPXMLRPCDecoder.m; sourceTree = "<group>"; };
+		635905D319F98C8E00693A25 /* WPXMLRPCDecoderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPXMLRPCDecoderDelegate.h; sourceTree = "<group>"; };
+		635905D419F98C8E00693A25 /* WPXMLRPCDecoderDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPXMLRPCDecoderDelegate.m; sourceTree = "<group>"; };
+		635905D519F98C8E00693A25 /* WPXMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPXMLRPCEncoder.h; sourceTree = "<group>"; };
+		635905D619F98C8E00693A25 /* WPXMLRPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPXMLRPCEncoder.m; sourceTree = "<group>"; };
+		635905D819F98C8E00693A25 /* XMLRPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnection.h; sourceTree = "<group>"; };
+		635905D919F98C8E00693A25 /* XMLRPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnection.m; sourceTree = "<group>"; };
+		635905DA19F98C8E00693A25 /* XMLRPCDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCDecoder.h; sourceTree = "<group>"; };
+		635905DB19F98C8E00693A25 /* XMLRPCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCDecoder.m; sourceTree = "<group>"; };
+		635905DC19F98C8E00693A25 /* XMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		635905DD19F98C8E00693A25 /* XMLRPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEncoder.m; sourceTree = "<group>"; };
+		635905DE19F98C8E00693A25 /* XMLRPCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCExtensions.h; sourceTree = "<group>"; };
+		635905DF19F98C8E00693A25 /* XMLRPCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCExtensions.m; sourceTree = "<group>"; };
+		635905E019F98C8E00693A25 /* XMLRPCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCRequest.h; sourceTree = "<group>"; };
+		635905E119F98C8E00693A25 /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
+		635905E219F98C8E00693A25 /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
+		635905E319F98C8E00693A25 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		635905E419F98C8E00693A25 /* XMLValueDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLValueDecoder.h; sourceTree = "<group>"; };
+		635905E519F98C8E00693A25 /* XMLValueDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLValueDecoder.m; sourceTree = "<group>"; };
 		63EE3F6D19E5F95D0095026D /* Mayo-ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mayo-ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EE3F7119E5F95D0095026D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63EE3F7219E5F95D0095026D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +118,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635905C919F98C8E00693A25 /* WPXMLRPC */ = {
+			isa = PBXGroup;
+			children = (
+				635905CA19F98C8E00693A25 /* WPBase64Utils.h */,
+				635905CB19F98C8E00693A25 /* WPBase64Utils.m */,
+				635905CC19F98C8E00693A25 /* WPStringUtils.h */,
+				635905CD19F98C8E00693A25 /* WPStringUtils.m */,
+				635905CE19F98C8E00693A25 /* WPXMLRPC.h */,
+				635905CF19F98C8E00693A25 /* WPXMLRPCDataCleaner.h */,
+				635905D019F98C8E00693A25 /* WPXMLRPCDataCleaner.m */,
+				635905D119F98C8E00693A25 /* WPXMLRPCDecoder.h */,
+				635905D219F98C8E00693A25 /* WPXMLRPCDecoder.m */,
+				635905D319F98C8E00693A25 /* WPXMLRPCDecoderDelegate.h */,
+				635905D419F98C8E00693A25 /* WPXMLRPCDecoderDelegate.m */,
+				635905D519F98C8E00693A25 /* WPXMLRPCEncoder.h */,
+				635905D619F98C8E00693A25 /* WPXMLRPCEncoder.m */,
+			);
+			path = WPXMLRPC;
+			sourceTree = "<group>";
+		};
+		635905D719F98C8E00693A25 /* XMLRPC */ = {
+			isa = PBXGroup;
+			children = (
+				635905D819F98C8E00693A25 /* XMLRPCConnection.h */,
+				635905D919F98C8E00693A25 /* XMLRPCConnection.m */,
+				635905DA19F98C8E00693A25 /* XMLRPCDecoder.h */,
+				635905DB19F98C8E00693A25 /* XMLRPCDecoder.m */,
+				635905DC19F98C8E00693A25 /* XMLRPCEncoder.h */,
+				635905DD19F98C8E00693A25 /* XMLRPCEncoder.m */,
+				635905DE19F98C8E00693A25 /* XMLRPCExtensions.h */,
+				635905DF19F98C8E00693A25 /* XMLRPCExtensions.m */,
+				635905E019F98C8E00693A25 /* XMLRPCRequest.h */,
+				635905E119F98C8E00693A25 /* XMLRPCRequest.m */,
+				635905E219F98C8E00693A25 /* XMLRPCResponse.h */,
+				635905E319F98C8E00693A25 /* XMLRPCResponse.m */,
+				635905E419F98C8E00693A25 /* XMLValueDecoder.h */,
+				635905E519F98C8E00693A25 /* XMLValueDecoder.m */,
+			);
+			path = XMLRPC;
+			sourceTree = "<group>";
+		};
 		63EE3F6419E5F95D0095026D = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +184,11 @@
 		63EE3F6F19E5F95D0095026D /* Mayo-ipad */ = {
 			isa = PBXGroup;
 			children = (
+				635905C919F98C8E00693A25 /* WPXMLRPC */,
+				635905D719F98C8E00693A25 /* XMLRPC */,
+				635905C519F98C8000693A25 /* appConstants.h */,
+				635905C619F98C8000693A25 /* NSString+XMLExtensions.h */,
+				635905C719F98C8000693A25 /* NSString+XMLExtensions.m */,
 				63EE3F9619E601D30095026D /* mayo-clinic-logo.png */,
 				63EE3F7419E5F95D0095026D /* AppDelegate.h */,
 				63EE3F7519E5F95D0095026D /* AppDelegate.m */,
@@ -189,6 +279,7 @@
 				TargetAttributes = {
 					63EE3F6C19E5F95D0095026D = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 3SQ68LVT3N;
 					};
 					63EE3F8519E5F95E0095026D = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -242,8 +333,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				63EE3F7919E5F95D0095026D /* ViewController.m in Sources */,
+				635905EB19F98C8E00693A25 /* WPXMLRPCEncoder.m in Sources */,
+				635905E719F98C8E00693A25 /* WPStringUtils.m in Sources */,
+				635905EF19F98C8E00693A25 /* XMLRPCExtensions.m in Sources */,
+				635905EC19F98C8E00693A25 /* XMLRPCConnection.m in Sources */,
+				635905F219F98C8E00693A25 /* XMLValueDecoder.m in Sources */,
+				635905C819F98C8000693A25 /* NSString+XMLExtensions.m in Sources */,
+				635905E819F98C8E00693A25 /* WPXMLRPCDataCleaner.m in Sources */,
+				635905ED19F98C8E00693A25 /* XMLRPCDecoder.m in Sources */,
+				635905EA19F98C8E00693A25 /* WPXMLRPCDecoderDelegate.m in Sources */,
 				63EE3F9A19E605820095026D /* ViewController2.m in Sources */,
+				635905E919F98C8E00693A25 /* WPXMLRPCDecoder.m in Sources */,
 				63EE3F7619E5F95D0095026D /* AppDelegate.m in Sources */,
+				635905F019F98C8E00693A25 /* XMLRPCRequest.m in Sources */,
+				635905EE19F98C8E00693A25 /* XMLRPCEncoder.m in Sources */,
+				635905F119F98C8E00693A25 /* XMLRPCResponse.m in Sources */,
+				635905E619F98C8E00693A25 /* WPBase64Utils.m in Sources */,
 				63EE3F7319E5F95D0095026D /* main.m in Sources */,
 				63EE3FA419E70C460095026D /* CustomPhotoAlbum.m in Sources */,
 			);
@@ -369,9 +474,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mayo-ipad/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -379,9 +488,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mayo-ipad/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

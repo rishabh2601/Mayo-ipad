@@ -16,6 +16,7 @@
 
 @implementation ViewController2
 @synthesize viewOverview, viewReport, upLoad, library;
+UIImage *imageView, *imageVIew2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -111,6 +112,8 @@
         }
     }];
     
+    imageView = image;
+    imageVIew2 = image;
     [picker dismissModalViewControllerAnimated:NO];
 }
 

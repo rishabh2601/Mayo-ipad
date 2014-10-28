@@ -33,18 +33,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="i1O-K5-KxH"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PO-jV-zCB">
-                                <rect key="frame" x="326" y="294" width="116" height="30"/>
-                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lh2-qO-eqX"/>
-                                    <segue destination="m1v-FK-Y8R" kind="presentation" identifier="login_success" id="wLC-6z-uId"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAy-aC-RXC">
                                 <rect key="frame" x="211" y="161" width="359" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -53,6 +41,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ztM-Fz-iVH"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PO-jV-zCB">
+                                <rect key="frame" x="332" y="321" width="116" height="30"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAy-Om-Z5u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -64,6 +63,7 @@
                     <connections>
                         <outlet property="passWord" destination="Z5g-fn-ccE" id="N6k-pz-Yk2"/>
                         <outlet property="userName" destination="aAy-aC-RXC" id="NDk-9G-nOq"/>
+                        <segue destination="m1v-FK-Y8R" kind="modal" identifier="login_success" id="VVP-Uq-DsR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,7 +73,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1294" y="-672"/>
+            <point key="canvasLocation" x="-1207" y="-661"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="Qx7-6D-upC">
